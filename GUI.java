@@ -23,4 +23,14 @@ public class GUI {
         Display.sync();
     }
 
+    public static void Draw(){
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        for(GUIElement[] line:cells){
+            for(GUIElement cell:line){
+                drawElement(cell);
+            }
+        }
+    }
+
 }
