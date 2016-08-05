@@ -1,3 +1,5 @@
+import org.lwjgl.opengl.*;
+
 /**
  * Created by Artur Komendacki on 05.08.2016.
  */
@@ -11,4 +13,14 @@ public class GUI {
 
         return cells[cell_x][cell_y].receiveClick(x, y, button);
     }
+
+    public static void Update(){
+        updateOpenGL();
+    }
+
+    private static void updateOpenGL(){
+        Display.update();
+        Display.sync();
+    }
+
 }
