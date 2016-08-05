@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
 /**
  * Created by Artur Komendacki on 05.08.2016.
  */
@@ -8,5 +12,15 @@ public enum Sprite {
 
     private Texture texture;
 
+
+    private Sprite(String textureName){
+        try{
+            this.texture = TextureLoader.getTexture("PNG", new FileInputStream(new File("res/"+textureName+".png")));
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
 
 }
