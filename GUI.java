@@ -20,7 +20,7 @@ public class GUI {
 
     private static void updateOpenGL(){
         Display.update();
-        Display.sync();
+        Display.sync(60);
     }
 
     public static void Draw(){
