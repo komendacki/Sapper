@@ -33,4 +33,22 @@ public class GUI {
         }
     }
 
+    private static void drawElement(GUIElement elem){
+
+
+        elem.getSprite().getTexture().bling();
+
+        /*SHOULD BE REFACTORED!!!*/
+        glBegin(GL_QUADS);
+            glTextCoord2f(0, 0);
+            glVertex2f(elem.getX(), elem.getY()+elem.getHeight());
+            glTexCoord2f(1, 0);
+            glVertex2f(elem.getX()+elem.getWidth(), elem.getY()+elem.getHeight());
+            glTexCoord2f(1,1);
+            glVertex2f(elem.getX()+elem.getWidth(), elem.getY());
+            glTextCoord2f(0, 1);
+            glVertex2f(elem.getX(), elem.getY());
+        glEnd();
+    }
+
 }
