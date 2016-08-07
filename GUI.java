@@ -51,4 +51,9 @@ public class GUI {
         glEnd();
     }
 
+    public static void init(){
+        initializeOpenGL();
+        this.cells = Generator.generate();
+    }
+
 }
