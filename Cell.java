@@ -7,7 +7,8 @@ public class Cell implements GUIElement {
     private int y;
     private int state;
     boolean isMarked;
-    
+    boolean isHidden;
+
 
     public Cell(int x, int y, int state){
         this.x = x;
