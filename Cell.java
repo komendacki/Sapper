@@ -6,6 +6,8 @@ public class Cell implements GUIElement {
     private int x;
     private int y;
     private int state;
+    boolean isMarked;
+    
 
     public Cell(int x, int y, int state){
         this.x = x;
