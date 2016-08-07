@@ -14,6 +14,8 @@ public class Cell implements GUIElement {
         this.x = x;
         this.y = y;
         this.state = state;
+        isMarked = false;
+        isHidden = false;
     }
 
 
