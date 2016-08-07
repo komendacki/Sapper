@@ -41,7 +41,24 @@ public class Cell implements GUIElement {
 
     @Override
     public Sprite getSprite() {
-        return null;
+        if (this.isMarked){
+            if(!this.isHidden && this.state != -1){
+                return Sprite.BROKEN_FLAG;
+            }
+            return Sprite.FLAG;
+        }else if(this.isHidden){
+            return Sprite.HIDEN;
+        }else{
+            switch(state){
+                case -2:
+                    return Sprite.EXPLOSION;
+                case -1:
+                    return Sprite.BOMB;
+                default:
+                    assert (state>=0 && state<=8): "Some crap";
+                    return skin_by_number[state];
+            }
+        }
     }
 
     @Override
