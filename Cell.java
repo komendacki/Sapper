@@ -7,6 +7,12 @@ public class Cell implements GUIElement {
     private int y;
     private int state;
 
+    public Cell(int x, int y, int state){
+        this.x = x;
+        this.y = y;
+        this.state = state;
+    }
+
 
     @Override
     public int getHeight() {
